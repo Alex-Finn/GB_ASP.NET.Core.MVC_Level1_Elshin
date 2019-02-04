@@ -1,0 +1,68 @@
+﻿@model WebStore.Models.EmployeeView
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4>EmployeeView</h4>
+        <hr />
+        <table border="1">
+            <tr>
+                <th align="left">
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Id)
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    @Html.DisplayNameFor(model => model.SecondName)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.SecondName)
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    @Html.DisplayNameFor(model => model.Patronymic)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Patronymic)
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    @Html.DisplayNameFor(model => model.Age)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Age)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <hr />
+        @Html.ActionLink("Edit", null, new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
