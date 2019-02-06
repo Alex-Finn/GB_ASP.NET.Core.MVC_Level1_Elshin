@@ -27,3 +27,9 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Footer.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Header.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.csprojAssemblyReference.cache
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Partial\_Slider.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Partial\_Leftsidebar.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Partial\_Featuresitems.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Partial\_Categorytabs.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Partial\_Recommendeditems.g.cshtml.cs
