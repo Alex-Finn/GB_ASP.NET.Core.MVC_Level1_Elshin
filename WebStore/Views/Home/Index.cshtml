@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Магазин раз два три. Это хтмл-хелпер файла home/index";
+}
+
+@await Html.PartialAsync("Partial/_Slider")
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                @await  Html.PartialAsync("Partial/_Leftsidebar")
+            </div>
+            
+            <div class="col-sm-9 padding-right">
+                @await Html.PartialAsync("Partial/_Featuresitems")
+
+                @await Html.PartialAsync("Partial/_Categorytabs")
+
+                @await Html.PartialAsync("Partial/_Recommendeditems")
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+}
