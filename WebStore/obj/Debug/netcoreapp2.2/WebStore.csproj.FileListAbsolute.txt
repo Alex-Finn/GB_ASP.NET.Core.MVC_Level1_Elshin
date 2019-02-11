@@ -40,6 +40,6 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\ProductDetails.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Login.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\ContactUs.g.cshtml.cs
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.csprojAssemblyReference.cache
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Employes\index.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Employes\Edit.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutBase.g.cshtml.cs
