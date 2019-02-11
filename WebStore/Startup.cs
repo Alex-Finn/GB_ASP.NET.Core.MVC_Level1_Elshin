@@ -33,6 +33,7 @@ namespace WebStore
             });
 
             services.AddSingleton<IEmployesData, InMemoryEmployesData>();
+            services.AddSingleton<IProductData, InMemoryProductData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

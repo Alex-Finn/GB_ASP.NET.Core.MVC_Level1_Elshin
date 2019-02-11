@@ -4735,6 +4735,15 @@
         "dependencies": {
           "bootstrap": "3.0.1"
         }
+      },
+      "WebStore.DomainEntities/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/WebStore.DomainEntities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.DomainEntities.dll": {}
+        }
       }
     }
   },
@@ -13037,6 +13046,11 @@
         "twitter.bootstrap.3.0.1.1.nupkg.sha512",
         "twitter.bootstrap.nuspec"
       ]
+    },
+    "WebStore.DomainEntities/1.0.0": {
+      "type": "project",
+      "path": "../WebStore.DomainEntities/WebStore.DomainEntities.csproj",
+      "msbuildProject": "../WebStore.DomainEntities/WebStore.DomainEntities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13045,7 +13059,8 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.0",
-      "Twitter.Bootstrap >= 3.0.1.1"
+      "Twitter.Bootstrap >= 3.0.1.1",
+      "WebStore.DomainEntities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13072,7 +13087,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

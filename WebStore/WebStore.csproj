@@ -12,4 +12,8 @@
     <PackageReference Include="Twitter.Bootstrap" Version="3.0.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebStore.DomainEntities\WebStore.DomainEntities.csproj" />
+  </ItemGroup>
+
 </Project>

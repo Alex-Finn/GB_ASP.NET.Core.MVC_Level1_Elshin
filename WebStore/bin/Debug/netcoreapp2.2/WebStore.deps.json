@@ -28,7 +28,8 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.0",
-          "Twitter.Bootstrap": "3.0.1.1"
+          "Twitter.Bootstrap": "3.0.1.1",
+          "WebStore.DomainEntities": "1.0.0"
         },
         "runtime": {
           "WebStore.dll": {}
@@ -523,6 +524,14 @@
       "Twitter.Bootstrap/3.0.1.1": {
         "dependencies": {
           "bootstrap": "3.0.1"
+        }
+      },
+      "WebStore.DomainEntities/1.0.0": {
+        "runtime": {
+          "WebStore.DomainEntities.dll": {}
+        },
+        "compile": {
+          "WebStore.DomainEntities.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3741,6 +3750,11 @@
       "sha512": "sha512-9SzxEOEB/rKKeTO/2Tv9uPRzQg/chRfofY9yZ71Sgpxfubp1IXiQlRRFc7IhH+fxo3S/u0umS4dUSgHeYnFIsw==",
       "path": "twitter.bootstrap/3.0.1.1",
       "hashPath": "twitter.bootstrap.3.0.1.1.nupkg.sha512"
+    },
+    "WebStore.DomainEntities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
