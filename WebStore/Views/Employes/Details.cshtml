@@ -1,22 +1,14 @@
-﻿@model WebStore.Models.EmployeeView
+﻿@model WebStore.Models.EmployeeViewModel
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Информация о сотруднике";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-
-    <div>
-        <h4>EmployeeView</h4>
+<section>
+    <div class=" container">
+        <h3>@ViewData["Title"]</h3>
         <hr />
-        <table border="1">
+        <table class=" table">
             <tr>
                 <th align="left">
                     @Html.DisplayNameFor(model => model.Id)
@@ -58,11 +50,10 @@
                 </td>
             </tr>
         </table>
-    </div>
-    <div>
+
         <hr />
-        @Html.ActionLink("Edit", null, new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
+
+        @Html.ActionLink("Назад к списку сотрудников", "Index", "Employes", null, new { @class = "btn btn-default" })
+
     </div>
-</body>
-</html>
+</section>

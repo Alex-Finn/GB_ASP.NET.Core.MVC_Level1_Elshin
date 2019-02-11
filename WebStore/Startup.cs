@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using WebStore.Infrasructure.Middleware;
+using WebStore.Infrasructure.Filters;
+using WebStore.Infrasructure.Interfaces;
+using WebStore.Infrasructure.Implementations;
 
 namespace WebStore
 {
@@ -23,7 +27,12 @@ namespace WebStore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                //options.Filters.Add(typeof(TestResultFilter));
+            });
+
+            services.AddSingleton<IEmployesData, InMemoryEmployesData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,7 +43,22 @@ namespace WebStore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
+
+            //app.UseMiddleware<TestMiddleware>();
+            //app.UseTestMiddleware();
+
+            app.MapWhen(context => context.Request.Query.ContainsKey("testparam") &&
+                                   context.Request.Query["testparam"] == "1234", action =>
+                                   {
+                                       action.Run(async context => await context.Response.WriteAsync("Test parameter is 1234"));
+                                   });
+
+            app.Map("/Testdata", action =>
+            {
+                action.Run(async context => await context.Response.WriteAsync("Test Data route"));
+            });
 
             app.UseMvc(routes =>
             {
@@ -44,7 +68,7 @@ namespace WebStore
             });
             //app.Run(async (context) =>
             //{
-            //    await context.Response.WriteAsync(hello);
+            //    await context.Response.WriteAsync("hello");
             //});
         }
     }

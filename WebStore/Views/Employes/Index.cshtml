@@ -1,25 +1,37 @@
-﻿@model IEnumerable<WebStore.Models.EmployeeView>
+﻿@model IEnumerable<WebStore.Models.EmployeeViewModel>
 
-<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Список сотрудников";
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" charset="utf-8" />
-    <title>Index</title>
-</head>
-<body>
-    <section>
-        <div>
+@*@{
+        Layout = null;
+    }*@
+
+<section id="emplyee_index">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a asp-controller="Home" asp-action="Index">Домой</a></li>
+                <li class="active">Список сотрудников</li>
+            </ol>
+        </div>
+        <div class="table-responsive">
             <h3>Сотрудники</h3>
-            <table border="1">
+            <a asp-controller="Employes" asp-action="Edit" class="btn btn-success">Создать</a>
+            <hr />
+
+            <table class="table table-condensed">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>FirstName</th>
-                        <th>SecondName</th>
-                        <th>Patronymic</th>
-                        <th>Age</th>
-                        <th>Details</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>Возраст</th>
+                        <th>Подробнее</th>
+                        <th>Редактирование</th>
+                        <th>Удаление</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,14 +43,13 @@
                             <td>@item.SecondName</td>
                             <td>@item.Patronymic</td>
                             <td>@item.Age</td>
-                            <td>@Html.ActionLink("Детали","Details",new { id = item.Id })</td>
+                            <td>@Html.ActionLink("Детали", "Details", new { id = item.Id })</td>
+                            <td>@Html.ActionLink("Ред.", "Edit", "Employes", new { id = item.Id })</td>
+                            <td>@Html.ActionLink("Удалить", "Delete", "Employes", new { id = item.Id })</td>
                         </tr>
                     }
                 </tbody>
-                
             </table>
         </div>
-    </section>
-</body>
-
-</html>
+    </div>
+</section> <!--/#cart_items-->
