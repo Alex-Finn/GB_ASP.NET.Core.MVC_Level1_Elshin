@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebStore.Models.EmployeeViewModel>
+
+@{
+    ViewData["Title"] = "Список сотрудников";
+}
+
+@*@{
+        Layout = null;
+    }*@
+
+<section id="emplyee_index">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a asp-controller="Home" asp-action="Index">Домой</a></li>
+                <li class="active">Список сотрудников</li>
+            </ol>
+        </div>
+        <div class="table-responsive">
+            <h3>Сотрудники</h3>
+            <a asp-controller="Employes" asp-action="Edit" class="btn btn-success">Создать</a>
+            <hr />
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>Возраст</th>
+                        <th>Подробнее</th>
+                        <th>Редактирование</th>
+                        <th>Удаление</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.FirstName</td>
+                            <td>@item.SecondName</td>
+                            <td>@item.Patronymic</td>
+                            <td>@item.Age</td>
+                            <td>@Html.ActionLink("Детали", "Details", new { id = item.Id })</td>
+                            <td>@Html.ActionLink("Ред.", "Edit", "Employes", new { id = item.Id })</td>
+                            <td>@Html.ActionLink("Удалить", "Delete", "Employes", new { id = item.Id })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> <!--/#cart_items-->
