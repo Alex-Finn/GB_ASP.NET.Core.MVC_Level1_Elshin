@@ -10,5 +10,8 @@ namespace WebStore.Infrasructure.Interfaces
     {
         IEnumerable<Brand> GetBrands();
         IEnumerable<Section> GetSections();
+        IEnumerable<Product> GetProducts();
+
+        int GetBrandProductCount(int brandId);
     }
 }

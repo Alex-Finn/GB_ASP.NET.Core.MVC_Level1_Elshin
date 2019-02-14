@@ -151,5 +151,10 @@ namespace WebStore.Data
             new Section { Id = 29, Name = "Bags", Order = 8, ParentId = null },
             new Section {Id = 30, Name = "Shoes", Order = 9, ParentId = null}
         };
+
+        public static List<Product> Products { get; } = new List<Product>
+        {
+            new Product{}
+        };
     }
 }
