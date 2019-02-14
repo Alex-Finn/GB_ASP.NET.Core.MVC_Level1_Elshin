@@ -53,4 +53,3 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\System.Numerics.Vectors.xml
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.csproj.CopyComplete
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.csprojAssemblyReference.cache
