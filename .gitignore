@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/WebStore/v15/Server/sqlite3
+/MVCLearningDB.mdf
+/MVCLearningDB_log.ldf

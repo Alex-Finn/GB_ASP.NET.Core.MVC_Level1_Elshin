@@ -3,7 +3,6 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\WebStore.DomainEntities.pdb
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.pdb
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.csprojAssemblyReference.cache
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\WebStore.DomainEntities.dll.config
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\Microsoft.EntityFrameworkCore.dll
@@ -54,3 +53,4 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\System.Numerics.Vectors.xml
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.csproj.CopyComplete
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntities\obj\Debug\WebStore.DomainEntities.csprojAssemblyReference.cache

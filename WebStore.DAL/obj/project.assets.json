@@ -422,15 +422,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.PowerShell.3.ReferenceAssemblies/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net4/System.Management.Automation.dll": {}
-        },
-        "runtime": {
-          "lib/net4/System.Management.Automation.dll": {}
-        }
-      },
       "Microsoft.Win32.Registry/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -1623,38 +1614,6 @@
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Microsoft.PowerShell.3.ReferenceAssemblies/1.0.0": {
-      "sha512": "lMDlqY0Dhqg4Fg+1B9MkLwfUuw46wQWdXqWzC1dsJcsFHLEt8BO7um7rtETTuoev+l7rxarRCIeeFcd1aCqRxg==",
-      "type": "package",
-      "path": "microsoft.powershell.3.referenceassemblies/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net4/Microsoft.Management.Infrastructure.CimCmdlets.dll",
-        "lib/net4/Microsoft.Management.Infrastructure.Native.dll",
-        "lib/net4/Microsoft.Management.Infrastructure.dll",
-        "lib/net4/Microsoft.PowerShell.Activities.dll",
-        "lib/net4/Microsoft.PowerShell.Commands.Diagnostics.dll",
-        "lib/net4/Microsoft.PowerShell.Commands.Management.dll",
-        "lib/net4/Microsoft.PowerShell.Commands.Utility.dll",
-        "lib/net4/Microsoft.PowerShell.ConsoleHost.dll",
-        "lib/net4/Microsoft.PowerShell.Core.Activities.dll",
-        "lib/net4/Microsoft.PowerShell.Diagnostics.Activities.dll",
-        "lib/net4/Microsoft.PowerShell.Editor.dll",
-        "lib/net4/Microsoft.PowerShell.GPowerShell.dll",
-        "lib/net4/Microsoft.PowerShell.GraphicalHost.dll",
-        "lib/net4/Microsoft.PowerShell.ISECommon.dll",
-        "lib/net4/Microsoft.PowerShell.Management.Activities.dll",
-        "lib/net4/Microsoft.PowerShell.ScheduledJob.dll",
-        "lib/net4/Microsoft.PowerShell.Security.Activities.dll",
-        "lib/net4/Microsoft.PowerShell.Security.dll",
-        "lib/net4/Microsoft.PowerShell.Utility.Activities.dll",
-        "lib/net4/Microsoft.Powershell.Workflow.ServiceCore.dll",
-        "lib/net4/System.Management.Automation.dll",
-        "microsoft.powershell.3.referenceassemblies.1.0.0.nupkg.sha512",
-        "microsoft.powershell.3.referenceassemblies.nuspec"
       ]
     },
     "Microsoft.Win32.Registry/4.5.0": {
@@ -3677,7 +3636,6 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.2",
       "Microsoft.EntityFrameworkCore.Tools >= 2.2.2",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.PowerShell.3.ReferenceAssemblies >= 1.0.0",
       "WebStore.DomainEntities >= 1.0.0"
     ]
   },
@@ -3736,10 +3694,6 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
-          },
-          "Microsoft.PowerShell.3.ReferenceAssemblies": {
-            "target": "Package",
-            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -3749,17 +3703,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"Microsoft.PowerShell.3.ReferenceAssemblies 1.0.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1\", а не целевой платформы проекта \".NETCoreApp,Version=v2.2\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "Microsoft.PowerShell.3.ReferenceAssemblies",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }
