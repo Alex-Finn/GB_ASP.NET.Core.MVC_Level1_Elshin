@@ -1,10 +1,11 @@
 ﻿<div class="left-sidebar">
 
     @await Component.InvokeAsync("Section")
+    @await Component.InvokeAsync("Brands")
 
-    <div class="brands_products">
+    @*<div class="brands_products">*@
         <!--brands_products-->
-        <h2>Brands</h2>
+        @*<h2>Brands</h2>           всё ушло в компоненты
         <div class="brands-name">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
@@ -16,7 +17,7 @@
                 <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
             </ul>
         </div>
-    </div><!--/brands_products-->
+    </div>*@ <!--/brands_products-->
 
     <div class="price-range">
         <!--price-range-->
@@ -29,7 +30,7 @@
 
     <div class="shipping text-center">
         <!--shipping-->
-        <img src="images/home/shipping.jpg" alt="" />
+        <img src="~/images/home/shipping.jpg" alt="" />
     </div><!--/shipping-->
 
 </div>

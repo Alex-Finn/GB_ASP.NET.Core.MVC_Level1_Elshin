@@ -11,6 +11,8 @@ using WebStore.Infrasructure.Middleware;
 using WebStore.Infrasructure.Filters;
 using WebStore.Infrasructure.Interfaces;
 using WebStore.Infrasructure.Implementations;
+using WebStore.DAL.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebStore
 {
@@ -34,6 +36,9 @@ namespace WebStore
 
             services.AddSingleton<IEmployesData, InMemoryEmployesData>();
             services.AddSingleton<IProductData, InMemoryProductData>();
+
+            services.AddDbContext<WebStroreContext>(options => 
+                    options.UseSqlServer(Configuration.GetConnectionString("ToFileConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

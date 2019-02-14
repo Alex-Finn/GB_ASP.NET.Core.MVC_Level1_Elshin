@@ -10,8 +10,14 @@ namespace WebStore.Models
     public class BrandViewModel : INamedEntity, IOrderedEntity
     {
         public string Name { get; set; }
+
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
         public int Order { get; set; }
+
+        /// <summary>
+        /// Количество товаров бренда
+        /// </summary>
+        public int ProductsCount { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using WebStore.DomainEntities.Entities.Base.Interfaces;
 
 namespace WebStore.DomainEntities.Entities
 {
-    public class Product : BaseEntity, IOrderedEntity
+    public class Product : NamedEntity, IOrderedEntity
     {
         public int Order { get; set; }
         /// <summary>
@@ -21,13 +21,22 @@ namespace WebStore.DomainEntities.Entities
         [ForeignKey("SectionId")]
         public virtual Section Section { get; set; }
 
+        /// <summary>
+        /// Бренд товара
+        /// </summary>
         public int? BrandId { get; set; }
 
         [ForeignKey("BrandId")]
         public virtual Brand Brand { get; set; }
 
+        /// <summary>
+        /// Ссылка на картинку
+        /// </summary>
         public string ImageUrl { get; set; }
-       
+
+        /// <summary>
+        /// Цена
+        /// </summary>
         public decimal Price { get; set; }
     }
 }

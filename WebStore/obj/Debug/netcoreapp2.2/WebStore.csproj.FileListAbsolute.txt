@@ -47,3 +47,9 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Recommendeditems.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Slider.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Section\Default.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\bin\Debug\netcoreapp2.2\WebStore.DAL.dll
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\bin\Debug\netcoreapp2.2\WebStore.DAL.pdb
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\bin\Debug\netcoreapp2.2\WebStore.DomainEntities.dll.config
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Shop_backup.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Brand\Default.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_ProductItems.g.cshtml.cs

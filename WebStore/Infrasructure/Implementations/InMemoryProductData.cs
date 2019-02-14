@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebStore.Data;
 using WebStore.DomainEntities.Entities;
+using WebStore.DomainEntities.Filters;
 using WebStore.Infrasructure.Interfaces;
 
 namespace WebStore.Infrasructure.Implementations
@@ -24,9 +25,16 @@ namespace WebStore.Infrasructure.Implementations
             return TestData.Brands;
         }
 
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<Product> GetProducts(ProductFilter filter)
         {
-            return TestData.Products;
+            var products = TestData.Products;
+            if (filter.SectionId.HasValue)
+                products = products.Where(p =>
+                p.SectionId.Equals(filter.SectionId)).ToList();
+            if (filter.BrandId.HasValue)
+                products = products.Where(p => p.BrandId.HasValue &&
+                p.BrandId.Value.Equals(filter.BrandId.Value)).ToList();
+            return products;
         }
 
         public IEnumerable<Section> GetSections()
