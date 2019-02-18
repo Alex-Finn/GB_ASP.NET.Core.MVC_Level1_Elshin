@@ -35,7 +35,8 @@ namespace WebStore
             });
 
             services.AddScoped<IEmployesData, InMemoryEmployesData>();
-            services.AddScoped<IProductData, InMemoryProductData>();
+            //services.AddScoped<IProductData, InMemoryProductData>();
+            services.AddScoped<IProductData, SqlProductData>();
 
             services.AddDbContext<WebStroreContext>(options => 
                     options.UseSqlServer(Configuration.GetConnectionString("ToFileConnection")));

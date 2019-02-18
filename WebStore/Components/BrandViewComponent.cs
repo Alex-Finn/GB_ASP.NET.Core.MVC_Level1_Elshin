@@ -8,11 +8,11 @@ using WebStore.Models;
 
 namespace WebStore.Components
 {
-    public class BrandsViewComponent : ViewComponent
+    public class BrandViewComponent : ViewComponent
     {
         private readonly IProductData _productData;
 
-        public BrandsViewComponent( IProductData productData)
+        public BrandViewComponent( IProductData productData)
         {
             _productData = productData;
         }
@@ -31,9 +31,11 @@ namespace WebStore.Components
                 Id = b.Id,
                 Name = b.Name,
                 Order = b.Order,
-                ProductsCount = 0
-                //ProductsCount = _productData.GetBrandProductCount(b.Id)
-            }).OrderBy(b => b.Order).ToList();
+                //ProductsCount = 0
+                ProductsCount = _productData.GetBrandProductCount(b.Id)
+            })
+            .OrderBy(b => b.Order)
+            .ToList();
         }
     }
 }

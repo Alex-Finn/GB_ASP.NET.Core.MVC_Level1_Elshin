@@ -6,3 +6,4 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntitiesNew\obj\Debug\netstandard2.0\WebStore.DomainEntities.AssemblyInfo.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntitiesNew\obj\Debug\netstandard2.0\WebStore.DomainEntities.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntitiesNew\obj\Debug\netstandard2.0\WebStore.DomainEntities.pdb
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore.DomainEntitiesNew\obj\Debug\netstandard2.0\WebStore.DomainEntities.csprojAssemblyReference.cache
