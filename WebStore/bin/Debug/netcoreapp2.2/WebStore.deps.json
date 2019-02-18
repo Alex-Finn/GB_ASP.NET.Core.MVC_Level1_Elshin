@@ -652,6 +652,9 @@
         }
       },
       "WebStore.DomainEntities/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
+        },
         "runtime": {
           "WebStore.DomainEntities.dll": {}
         },

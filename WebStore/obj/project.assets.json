@@ -4738,7 +4738,7 @@
       },
       "WebStore.DAL/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
           "WebStore.DomainEntities": "1.0.0"
@@ -4752,6 +4752,10 @@
       },
       "WebStore.DomainEntities/1.0.0": {
         "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
+        },
         "compile": {
           "bin/placeholder/WebStore.DomainEntities.dll": {}
         },
@@ -13063,13 +13067,13 @@
     },
     "WebStore.DAL/1.0.0": {
       "type": "project",
-      "path": "../WebStore.DAL/WebStore.DAL.csproj",
-      "msbuildProject": "../WebStore.DAL/WebStore.DAL.csproj"
+      "path": "../WebStore.DALNew/WebStore.DAL.csproj",
+      "msbuildProject": "../WebStore.DALNew/WebStore.DAL.csproj"
     },
     "WebStore.DomainEntities/1.0.0": {
       "type": "project",
-      "path": "../WebStore.DomainEntities/WebStore.DomainEntities.csproj",
-      "msbuildProject": "../WebStore.DomainEntities/WebStore.DomainEntities.csproj"
+      "path": "../WebStore.DomainEntitiesNew/WebStore.DomainEntities.csproj",
+      "msbuildProject": "../WebStore.DomainEntitiesNew/WebStore.DomainEntities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13108,11 +13112,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DAL\\WebStore.DAL.csproj": {
-              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DAL\\WebStore.DAL.csproj"
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DALNew\\WebStore.DAL.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DALNew\\WebStore.DAL.csproj"
             },
-            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj": {
-              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj"
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DomainEntitiesNew\\WebStore.DomainEntities.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\WebStore.DomainEntitiesNew\\WebStore.DomainEntities.csproj"
             }
           }
         }

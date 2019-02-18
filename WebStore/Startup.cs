@@ -34,8 +34,8 @@ namespace WebStore
                 //options.Filters.Add(typeof(TestResultFilter));
             });
 
-            services.AddSingleton<IEmployesData, InMemoryEmployesData>();
-            services.AddSingleton<IProductData, InMemoryProductData>();
+            services.AddScoped<IEmployesData, InMemoryEmployesData>();
+            services.AddScoped<IProductData, InMemoryProductData>();
 
             services.AddDbContext<WebStroreContext>(options => 
                     options.UseSqlServer(Configuration.GetConnectionString("ToFileConnection")));

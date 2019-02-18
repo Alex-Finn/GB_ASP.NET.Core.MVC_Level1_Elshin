@@ -151,7 +151,7 @@ namespace WebStore.Data
             new Section { Id = 27, Name = "Interiors", Order = 6, ParentId = null },
             new Section { Id = 28, Name = "Clothing", Order = 7, ParentId = null   },
             new Section { Id = 29, Name = "Bags", Order = 8, ParentId = null },
-            new Section {Id = 30, Name = "Shoes", Order = 9, ParentId = null}
+            new Section { Id = 30, Name = "Shoes", Order = 9, ParentId = null}
         };
 
         public static List<Product> Products { get; } = new List<Product>
@@ -236,46 +236,10 @@ namespace WebStore.Data
                 SectionId = 25,
                 BrandId = 2
             },
-            new Product
-            {
-                Id = 9,
-                Name = "Easy Polo Black Edition",
-                Price = 1025,
-                ImageUrl = "product9.jpg",
-                Order = 8,
-                SectionId = 25,
-                BrandId = 2
-            },
-            new Product
-            {
-                Id = 10,
-                Name = "Easy Polo Black Edition",
-                Price = 1025,
-                ImageUrl = "product10.jpg",
-                Order = 9,
-                SectionId = 25,
-                BrandId = 3
-            },
-            new Product
-            {
-                Id = 11,
-                Name = "Easy Polo Black Edition",
-                Price = 1025,
-                ImageUrl = "product11.jpg",
-                Order = 10,
-                SectionId = 25,
-                BrandId = 3
-            },
-            new Product
-            {
-                Id = 12,
-                Name = "Easy Polo Black Edition",
-                Price = 1025,
-                ImageUrl = "product12.jpg",
-                Order = 11,
-                SectionId = 25,
-                BrandId = 3
-            },
+            new Product{  Id = 9, Name = "Easy Polo Black Edition", Price = 1025, ImageUrl = "product9.jpg", Order = 8,  SectionId = 25, BrandId = 2  },
+            new Product { Id = 10, Name = "Easy Polo Black Edition", Price = 1025, ImageUrl = "product10.jpg", Order = 9, SectionId = 25, BrandId = 3 },
+            new Product { Id = 11, Name = "Easy Polo Black Edition", Price = 1025, ImageUrl = "product11.jpg", Order = 10, SectionId = 25, BrandId = 3 },
+            new Product { Id = 12, Name = "Easy Polo Black Edition", Price = 1025, ImageUrl = "product12.jpg", Order = 11, SectionId = 25, BrandId = 3 },
         };
 
         public static IEnumerable<Product> GetProducts(ProductFilter filter)
