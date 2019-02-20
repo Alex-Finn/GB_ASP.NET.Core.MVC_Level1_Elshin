@@ -13,6 +13,8 @@ using WebStore.Infrasructure.Interfaces;
 using WebStore.Infrasructure.Implementations;
 using WebStore.DAL.Context;
 using Microsoft.EntityFrameworkCore;
+using WebStore.DomainEntities.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebStore
 {
@@ -38,7 +40,37 @@ namespace WebStore
             //services.AddScoped<IProductData, InMemoryProductData>();
             services.AddScoped<IProductData, SqlProductData>();
 
-            services.AddDbContext<WebStroreContext>(options => 
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<WebStoreContext>()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(opt =>
+            {
+                opt.Password.RequiredLength = 3;
+                opt.Password.RequireDigit = false;
+                opt.Password.RequireUppercase = false;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireNonAlphanumeric = false;
+
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                opt.Lockout.MaxFailedAccessAttempts = 10;
+                opt.Lockout.AllowedForNewUsers = true;
+            });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Expiration = TimeSpan.FromDays(120);
+
+
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+
+                options.SlidingExpiration = true;
+            });
+
+            services.AddDbContext<WebStoreContext>(options => 
                     options.UseSqlServer(Configuration.GetConnectionString("ToFileConnection")));
         }
 
@@ -66,6 +98,8 @@ namespace WebStore
             {
                 action.Run(async context => await context.Response.WriteAsync("Test Data route"));
             });
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

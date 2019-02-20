@@ -25,7 +25,7 @@ namespace WebStore
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<WebStroreContext>();
+                    var context = services.GetRequiredService<WebStoreContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception e)

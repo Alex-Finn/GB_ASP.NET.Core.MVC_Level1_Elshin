@@ -9,7 +9,7 @@ namespace WebStore.Data
 {
     internal static class DbInitializer
     {
-        public static void Initialize(this WebStroreContext context)
+        public static void Initialize(this WebStoreContext context)
         {
             context.Database.EnsureCreated();
 

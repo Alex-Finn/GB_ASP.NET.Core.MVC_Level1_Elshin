@@ -11,8 +11,8 @@ namespace WebStore.Infrasructure.Implementations
 {
     public class SqlProductData : IProductData
     {
-        private readonly WebStroreContext _context;
-        public SqlProductData(WebStroreContext context) => _context = context;
+        private readonly WebStoreContext _context;
+        public SqlProductData(WebStoreContext context) => _context = context;
 
         public int GetBrandProductCount(int brandId)
         {
