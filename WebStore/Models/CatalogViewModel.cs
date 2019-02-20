@@ -9,5 +9,4 @@ namespace WebStore.Models
 
         public IEnumerable<ProductViewModel> Products { get; set; }
     }
-
 }
