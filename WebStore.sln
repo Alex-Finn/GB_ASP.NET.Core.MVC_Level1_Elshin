@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore", "WebStore\WebStore.csproj", "{6BB9560C-CE69-45A1-9808-4FE1E382F977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.DomainEntities", "WebStore.DomainEntitiesNew\WebStore.DomainEntities.csproj", "{7CA2AFD0-F10A-400B-AF24-984D68C3370C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.DomainEntities", "WebStore.DomainEntitiesNew\WebStore.DomainEntities.csproj", "{7CA2AFD0-F10A-400B-AF24-984D68C3370C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.DAL", "WebStore.DALNew\WebStore.DAL.csproj", "{2505F51A-9E39-40A8-B6AD-994AF327CE0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.DAL", "WebStore.DALNew\WebStore.DAL.csproj", "{2505F51A-9E39-40A8-B6AD-994AF327CE0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
