@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WebStore.DomainEntities.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using WebStore.DomainEntities.Entities;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WebStore.DAL.Context
 {

@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
 using WebStore.Infrasructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebStore.Controllers
 {
+    [Authorize]
     public class EmployesController : Controller
     {
         private readonly IEmployesData _employesData;

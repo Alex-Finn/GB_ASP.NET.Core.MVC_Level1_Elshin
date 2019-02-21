@@ -19,5 +19,7 @@ namespace WebStore.DomainEntities.Filters
         /// Бренд товара
         /// </summary>
         public int? BrandId { get; set; }
+
+        public IEnumerable<int> Ids { get; set; }
     }
 }

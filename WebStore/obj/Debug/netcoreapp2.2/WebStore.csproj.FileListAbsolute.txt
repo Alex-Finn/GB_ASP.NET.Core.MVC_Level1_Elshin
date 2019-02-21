@@ -18,6 +18,8 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.TagHelpers.input.cache
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.TagHelpers.output.cache
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.RazorCoreGenerate.cache
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\ProductDetails.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Shop.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Shop_backup.g.cshtml.cs
@@ -32,6 +34,7 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\ErrorPage404.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Brand\Default.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\LoginLogout\Default.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Section\Default.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Categorytabs.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Featuresitems.g.cshtml.cs
@@ -51,6 +54,4 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.csproj.CopyComplete
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\WebStore.pdb
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\LoginLogout\Default.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\Default.g.cshtml.cs

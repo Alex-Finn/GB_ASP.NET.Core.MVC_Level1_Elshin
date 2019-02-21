@@ -13112,6 +13112,7 @@
       "BuildBundlerMinifier >= 2.8.391",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.2",
@@ -13178,6 +13179,10 @@
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.Identity": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[2.2.0, )"
           },
