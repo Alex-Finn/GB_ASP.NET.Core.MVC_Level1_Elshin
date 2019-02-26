@@ -20,7 +20,7 @@ namespace WebStore.DomainEntities.Entities
         /// </summary>
         public int? ParentId { get; set; }
 
-        [ForeignKey("ParentId")]
+        [ForeignKey(nameof(ParentId))]
         public virtual Section ParentSection { get; set; }
 
         /// <summary>

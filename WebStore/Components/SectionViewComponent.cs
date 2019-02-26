@@ -10,11 +10,11 @@ namespace WebStore.Components
 {
     public class SectionViewComponent : ViewComponent
     {
-        private readonly IProductData _productData;
+        private readonly IProductData _ProductData;
 
-        public SectionViewComponent(IProductData productData)
+        public SectionViewComponent(IProductData ProductData)
         {
-            _productData = productData;
+            _ProductData = ProductData;
         }
 
 
@@ -26,7 +26,7 @@ namespace WebStore.Components
 
         private List<SectionViewModel> GetSections()
         {
-            var sections = _productData.GetSections();
+            var sections = _ProductData.GetSections();
             var parent_sections = sections.Where(section => section.ParentId is null).ToArray();
 
             var parent_sections_views = parent_sections
@@ -53,5 +53,5 @@ namespace WebStore.Components
             parent_sections_views.Sort((a, b) => Comparer<int>.Default.Compare(a.Order, b.Order));
             return parent_sections_views;
         }
-    }    
+    }
 }

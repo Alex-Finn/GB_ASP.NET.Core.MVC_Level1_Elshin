@@ -8,34 +8,24 @@ using WebStore.Models;
 
 namespace WebStore.Components
 {
-    public class BrandViewComponent : ViewComponent
+    public class BrandsViewComponent : ViewComponent
     {
-        private readonly IProductData _productData;
+        private readonly IProductData _ProductData;
 
-        public BrandViewComponent( IProductData productData)
-        {
-            _productData = productData;
-        }
+        public BrandsViewComponent(IProductData ProductData) => _ProductData = ProductData;
 
-        public async Task<IViewComponentResult> InvokeAsync()
-        {
-            var brands = GetBrands();
-            return View(brands);
-        }
+        public async Task<IViewComponentResult> InvokeAsync() => View(GetBrands());
 
-        public IEnumerable<BrandViewModel> GetBrands()
+        private IEnumerable<BrandViewModel> GetBrands()
         {
-            var dbBrands = _productData.GetBrands();
-            return dbBrands.Select(b => new BrandViewModel
+            return _ProductData.GetBrands().Select(brand => new BrandViewModel
             {
-                Id = b.Id,
-                Name = b.Name,
-                Order = b.Order,
-                //ProductsCount = 0
-                ProductsCount = _productData.GetBrandProductCount(b.Id)
+                Id = brand.Id,
+                Name = brand.Name,
+                Order = brand.Order
             })
-            .OrderBy(b => b.Order)
-            .ToList();
+                .OrderBy(brand => brand.Order)
+                .ToList();
         }
     }
 }

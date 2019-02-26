@@ -18,7 +18,7 @@ namespace WebStore.DomainEntities.Entities
         /// </summary>
         public int SectionId { get; set; }
 
-        [ForeignKey("SectionId")]
+        [ForeignKey(nameof(SectionId))]
         public virtual Section Section { get; set; }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace WebStore.DomainEntities.Entities
         /// </summary>
         public int? BrandId { get; set; }
 
-        [ForeignKey("BrandId")]
+        [ForeignKey(nameof(BrandId))]
         public virtual Brand Brand { get; set; }
 
         /// <summary>
