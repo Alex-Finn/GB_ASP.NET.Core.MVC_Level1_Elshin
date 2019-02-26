@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebStore.DomainEntities.Filters;
+using WebStore.DomainEntities.Entities;
 using WebStore.Infrasructure.Interfaces;
 using WebStore.Models;
 

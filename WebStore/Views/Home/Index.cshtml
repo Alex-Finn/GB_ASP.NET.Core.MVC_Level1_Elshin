@@ -1,7 +1,6 @@
-﻿
-@{
+﻿@{
+    ViewData["Title"] = "Магазин!";
     Layout = "_LayoutBase";
-    ViewData["Title"] = "Магазин раз два три. Это хтмл-хелпер файла home/index";
 }
 
 @await Html.PartialAsync("Partial/_Slider")
@@ -10,20 +9,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                @await  Html.PartialAsync("Partial/_Leftsidebar")
+                @await Html.PartialAsync("Partial/_LeftSideBar")
             </div>
-            
+
             <div class="col-sm-9 padding-right">
-                @await Html.PartialAsync("Partial/_Featuresitems")
+                @await Html.PartialAsync("Partial/_FeaturedItems")
 
-                @await Html.PartialAsync("Partial/_Categorytabs")
+                @await Html.PartialAsync("Partial/_CategoryTab")
 
-                @await Html.PartialAsync("Partial/_Recommendeditems")
-
+                @await Html.PartialAsync("Partial/_RecomendedItems")
             </div>
         </div>
     </div>
 </section>
-
-@section Scripts{
-}

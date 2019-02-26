@@ -46,8 +46,9 @@ namespace WebStore.Infrasructure.Implementations
         /// <param name="newEmployee">Новый сотрудник для добавления в список</param>
         public void AddNewEmployee(EmployeeViewModel newEmployee)
         {
-            if (_employees.Contains(newEmployee)) return;
-            newEmployee.Id = _employees.Max(emp => emp.Id) + 1;
+            if (_employees.Contains(newEmployee))
+                return;
+            newEmployee.Id = _employees.Max(e => e.Id) + 1;
             _employees.Add(newEmployee);
         }
 
@@ -66,20 +67,14 @@ namespace WebStore.Infrasructure.Implementations
         /// Получение списка сотрудников
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<EmployeeViewModel> Get()
-        {
-            return _employees;
-        }
+        public IEnumerable<EmployeeViewModel> Get() => _employees;
 
         /// <summary>
         /// Получение сотрудника по его Id
         /// </summary>
         /// <param name="id">Идентификатор сотрудника</param>
         /// <returns></returns>
-        public EmployeeViewModel GetById(int id)
-        {
-            return _employees.FirstOrDefault(emp => emp.Id == id);
-        }
+        public EmployeeViewModel GetById(int id) => _employees.FirstOrDefault(emp => emp.Id == id);
 
         public void SaveChanges()
         {

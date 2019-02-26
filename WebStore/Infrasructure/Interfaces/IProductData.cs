@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.DomainEntities.Entities;
-using WebStore.DomainEntities.Filters;
 
 namespace WebStore.Infrasructure.Interfaces
 {
@@ -11,10 +10,8 @@ namespace WebStore.Infrasructure.Interfaces
     {
         IEnumerable<Brand> GetBrands();
         IEnumerable<Section> GetSections();
-        IEnumerable<Product> GetProducts(ProductFilter filter = null);
 
-        int GetBrandProductCount(int brandId);
-
+        IEnumerable<Product> GetProducts(ProductFilter Filter = null);
         Product GetProductById(int id);
     }
 }

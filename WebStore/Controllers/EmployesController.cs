@@ -9,78 +9,100 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WebStore.Controllers
 {
+   //[Route("Users")]
+    //[TestActionFilter]
+    //[ServiceFilter(typeof(TestResultFilter))]
     [Authorize]
     public class EmployesController : Controller
     {
-        private readonly IEmployesData _employesData;
+        private readonly IEmployesData _EmployeesData;
 
-        public EmployesController(IEmployesData employesData)
+        public EmployesController(IEmployesData EmployeesData)
         {
-            _employesData = employesData;
+            _EmployeesData = EmployeesData;
         }
 
+        //[Route("Get")]
+        //[TestActionFilter]
         public IActionResult Index()
         {
-            return View(_employesData.Get());
+            return View(_EmployeesData.Get());
         }
 
         public IActionResult Details(int? id)
         {
-            if (id == null) return BadRequest();
+            if (id is null)
+                return BadRequest();
 
-            var employee = _employesData.GetById((int)id);
-            if (employee == null) return NotFound();
+            var employee = _EmployeesData.GetById((int)id);
+            if (employee is null)
+                return NotFound();
 
             return View(employee);
         }
 
         [HttpGet]
+        [Authorize(Roles = DomainEntities.Entities.User.AdminRole)]
         public IActionResult Edit(int? id)
         {
-            if (id == null) return View(new EmployeeViewModel
-            {
-                FirstName = "Имя",
-                SecondName = "Фамилия",
-                Patronymic = "Отчество",
-                Age = 18
-            });
+            if (id is null)
+                return View(new EmployeeViewModel
+                {
+                    FirstName = "Employee_name",
+                    SecondName = "Employee_second_name",
+                    Age = 18
+                });
 
-            var employee = _employesData.GetById((int)id);
-            if (employee == null) return NotFound();
+            var employee = _EmployeesData.GetById((int)id);
+            if (employee is null)
+                return NotFound();
 
             return View(employee);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = DomainEntities.Entities.User.AdminRole)]
         public IActionResult Edit(EmployeeViewModel model)
         {
-            if (!ModelState.IsValid) return View(model);
-            if(model.Id == 0)
+            if (!ModelState.IsValid)
             {
-                _employesData.AddNewEmployee(model);
+                if (model.Age % 2 == 0)
+                    ModelState.AddModelError("Ошибка возраста", "Возраст должен быть нечётным");
+                return View(model);
+            }
+            if (model.Id == 0)
+            {
+                _EmployeesData.AddNewEmployee(model);
             }
             else
             {
-                var employee = _employesData.GetById(model.Id);
-                if (employee == null) return NotFound();
+                var employee = _EmployeesData.GetById(model.Id);
+                if (employee is null)
+                    return NotFound();
+
                 employee.FirstName = model.FirstName;
                 employee.SecondName = model.SecondName;
                 employee.Patronymic = model.Patronymic;
                 employee.Age = model.Age;
             }
+
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete (int? id)
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = DomainEntities.Entities.User.AdminRole)]
+        public IActionResult Delete(int? id)
         {
-            if (id == null) return BadRequest();
-                        
-            if (_employesData.GetById((int)id) == null) return NotFound();
+            if (id is null)
+                return BadRequest();
 
-            _employesData.DeleteEmployee((int)id);
+            if (_EmployeesData.GetById((int)id) is null)
+                return NotFound();
+
+            _EmployeesData.DeleteEmployee((int)id);
 
             return RedirectToAction("Index");
-
         }
     }
 }

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebStore.DomainEntities.Filters;
+using WebStore.DomainEntities.Entities;
 using WebStore.Infrasructure.Interfaces;
 using WebStore.Models;
 

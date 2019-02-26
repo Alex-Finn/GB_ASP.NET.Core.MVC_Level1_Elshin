@@ -4,47 +4,29 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebStore.Data;
 using WebStore.DomainEntities.Entities;
-using WebStore.DomainEntities.Filters;
 using WebStore.Infrasructure.Interfaces;
 
 namespace WebStore.Infrasructure.Implementations
 {
     class InMemoryProductData : IProductData
     {
-        //private readonly List<Brand> _brands;
-        //private readonly List<Section> _sections;
-        //private readonly List<Product> _products;
+        public IEnumerable<Brand> GetBrands() => TestData.Brands;
 
-        public int GetBrandProductCount(int brandId)
+        public IEnumerable<Section> GetSections() => TestData.Sections;
+        public IEnumerable<Product> GetProducts(ProductFilter Filter = null)
         {
-            return TestData.Products.Count(product => product.BrandId == brandId);
-        }
-
-        public IEnumerable<Brand> GetBrands()
-        {
-            return TestData.Brands;
+            if (Filter is null) return TestData.Products;
+            var result = TestData.Products.AsEnumerable();
+            if (Filter.BrandId != null)
+                result = result.Where(product => product.BrandId == Filter.BrandId);
+            if (Filter.SectionId != null)
+                result = result.Where(product => product.SectionId == Filter.SectionId);
+            return result;
         }
 
         public Product GetProductById(int id)
         {
             return TestData.Products.FirstOrDefault(p => p.Id == id);
-        }
-
-        public IEnumerable<Product> GetProducts(ProductFilter filter)
-        {
-            var products = TestData.Products;
-            if (filter.SectionId.HasValue)
-                products = products.Where(p =>
-                p.SectionId.Equals(filter.SectionId)).ToList();
-            if (filter.BrandId.HasValue)
-                products = products.Where(p => p.BrandId.HasValue &&
-                p.BrandId.Value.Equals(filter.BrandId.Value)).ToList();
-            return products;
-        }
-
-        public IEnumerable<Section> GetSections()
-        {
-            return TestData.Sections;
         }
     }
 }

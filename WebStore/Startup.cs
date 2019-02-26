@@ -39,7 +39,8 @@ namespace WebStore
             services.AddScoped<IEmployesData, InMemoryEmployesData>();
             //services.AddScoped<IProductData, InMemoryProductData>();
             services.AddScoped<IProductData, SqlProductData>();
-           // services.AddScoped<ICartService, CookieCartService>();
+            services.AddScoped<ICartService, CookieCartService>();
+            services.AddScoped<IOrderService, SqlOrderService>();
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WebStoreContext>()
@@ -102,11 +103,10 @@ namespace WebStore
 
             app.UseAuthentication();
 
-            app.UseMvc(routes =>
+            app.UseMvc(route =>
             {
-                routes.MapRoute(
-                    name: "defaultRoute",
-                    template: "{controller=Home}/{action=Index}/{Id?}");
+                route.MapRoute("areas", "{area:exists}/{controller=Home}/{action=Index}/{id?}");                
+                route.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
             //app.Run(async (context) =>
             //{

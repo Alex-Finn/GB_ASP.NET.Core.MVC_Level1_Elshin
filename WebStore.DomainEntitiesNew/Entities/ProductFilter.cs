@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebStore.DomainEntities.Filters
+namespace WebStore.DomainEntities.Entities
 {
     /// <summary>
     /// Класс для фильтрации товаров

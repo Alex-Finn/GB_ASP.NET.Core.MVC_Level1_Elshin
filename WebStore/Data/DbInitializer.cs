@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using WebStore.DAL.Context;
 using WebStore.DomainEntities.Entities;
+using WebStore.Infrasructure;
 
 namespace WebStore.Data
 {
@@ -47,8 +48,7 @@ namespace WebStore.Data
                 foreach (var product in TestData.Products)
                     context.Products.Add(product);
 
-               // using (context.Products.IdentityInsert())
-                    context.SaveChanges();
+                using (context.Products.IdentityInsert()) context.SaveChanges();
                 transaction.Commit();
             }
         }

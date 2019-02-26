@@ -11,16 +11,14 @@ namespace WebStore.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<User> _userManager;
-        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _UserManager;
+        private readonly SignInManager<User> _SingInManager;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountController(UserManager<User> UserManager, SignInManager<User> SingInManager)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _UserManager = UserManager;
+            _SingInManager = SingInManager;
         }
-
-        public IActionResult Index() => View();
 
         [HttpGet]
         public IActionResult Login() => View(new LoginViewModel());
@@ -30,7 +28,7 @@ namespace WebStore.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var login_result = await _signInManager.PasswordSignInAsync(
+            var login_result = await _SingInManager.PasswordSignInAsync(
                 model.UserName,
                 model.Password,
                 model.RememberMe,
@@ -60,11 +58,11 @@ namespace WebStore.Controllers
                 UserName = model.UserName
             };
 
-            var registration_result = await _userManager.CreateAsync(user, model.Password);
+            var registration_result = await _UserManager.CreateAsync(user, model.Password);
             if (registration_result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, DomainEntities.Entities.User.UserRole);
-                await _signInManager.SignInAsync(user, false);
+                await _UserManager.AddToRoleAsync(user, DomainEntities.Entities.User.UserRole);
+                await _SingInManager.SignInAsync(user, false);
                 return RedirectToAction("Index", "Home");
             }
 
@@ -77,7 +75,7 @@ namespace WebStore.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            await _signInManager.SignOutAsync();
+            await _SingInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
     }
