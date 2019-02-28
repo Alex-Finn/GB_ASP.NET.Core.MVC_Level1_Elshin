@@ -941,7 +941,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ApiExplorer.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Core/2.2.0": {
+      "Microsoft.AspNetCore.Mvc.Core/2.2.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
@@ -4742,6 +4742,16 @@
           "bootstrap": "3.0.1"
         }
       },
+      "WebStore.Clients/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/WebStore.Clients.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.Clients.dll": {}
+        }
+      },
       "WebStore.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4763,6 +4773,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.2",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
         },
         "compile": {
@@ -4770,6 +4782,34 @@
         },
         "runtime": {
           "bin/placeholder/WebStore.DomainEntities.dll": {}
+        }
+      },
+      "WebStore.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "WebStore.DomainEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebStore.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.Interfaces.dll": {}
+        }
+      },
+      "WebStore.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
+          "WebStore.DAL": "1.0.0",
+          "WebStore.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebStore.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.Services.dll": {}
         }
       }
     }
@@ -5551,16 +5591,16 @@
         "microsoft.aspnetcore.mvc.apiexplorer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Core/2.2.0": {
-      "sha512": "ALiY4a6BYsghw8PT5+VU593Kqp911U3w9f/dH9/ZoI3ezDsDAGiObqPu/HP1oXK80Ceu0XdQ3F0bx5AXBeuN/Q==",
+    "Microsoft.AspNetCore.Mvc.Core/2.2.2": {
+      "sha512": "NJ0I39z3LHwZo23FjBDQr7nYVBLrH1CilAjqp18IJIJnWAqDHoaq1RftZWMISUH1iZgwW13q/WU68Yj9Kayg/w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.core/2.2.0",
+      "path": "microsoft.aspnetcore.mvc.core/2.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.xml",
-        "microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.core.2.2.2.nupkg.sha512",
         "microsoft.aspnetcore.mvc.core.nuspec"
       ]
     },
@@ -13096,6 +13136,11 @@
         "twitter.bootstrap.nuspec"
       ]
     },
+    "WebStore.Clients/1.0.0": {
+      "type": "project",
+      "path": "../../Services/WebStore.Clients/WebStore.Clients.csproj",
+      "msbuildProject": "../../Services/WebStore.Clients/WebStore.Clients.csproj"
+    },
     "WebStore.DAL/1.0.0": {
       "type": "project",
       "path": "../../Services/WebStore.DAL/WebStore.DAL.csproj",
@@ -13105,6 +13150,16 @@
       "type": "project",
       "path": "../../Common/WebStore.DomainEntities/WebStore.DomainEntities.csproj",
       "msbuildProject": "../../Common/WebStore.DomainEntities/WebStore.DomainEntities.csproj"
+    },
+    "WebStore.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../../Services/WebStore.Interfaces/WebStore.Interfaces.csproj",
+      "msbuildProject": "../../Services/WebStore.Interfaces/WebStore.Interfaces.csproj"
+    },
+    "WebStore.Services/1.0.0": {
+      "type": "project",
+      "path": "../../Services/WebStore.Services/WebStore.Services.csproj",
+      "msbuildProject": "../../Services/WebStore.Services/WebStore.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13117,8 +13172,11 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.2",
       "Twitter.Bootstrap >= 3.0.1.1",
+      "WebStore.Clients >= 1.0.0",
       "WebStore.DAL >= 1.0.0",
-      "WebStore.DomainEntities >= 1.0.0"
+      "WebStore.DomainEntities >= 1.0.0",
+      "WebStore.Interfaces >= 1.0.0",
+      "WebStore.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13153,8 +13211,17 @@
             "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj": {
               "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj"
             },
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Clients\\WebStore.Clients.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Clients\\WebStore.Clients.csproj"
+            },
             "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.DAL\\WebStore.DAL.csproj": {
               "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.DAL\\WebStore.DAL.csproj"
+            },
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj"
+            },
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Services\\WebStore.Services.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Services\\WebStore.Services.csproj"
             }
           }
         }

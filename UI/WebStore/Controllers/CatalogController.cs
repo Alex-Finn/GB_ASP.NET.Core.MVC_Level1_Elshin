@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.DomainEntities.Entities;
-using WebStore.Infrasructure.Interfaces;
+using WebStore.DomainEntities.ViewModels;
+using WebStore.Interfaces;
 using WebStore.Models;
 
 namespace WebStore.Controllers
