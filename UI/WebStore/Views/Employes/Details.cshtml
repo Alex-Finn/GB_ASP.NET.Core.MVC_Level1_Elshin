@@ -1,0 +1,54 @@
+﻿@model WebStore.DomainEntities.ViewModels.EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Информация о сотруднике";
+}
+
+<h3>@ViewData["Title"]</h3>
+<hr />
+<table class=" table">
+    <tr>
+        <th align="left">
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Id)
+        </td>
+    </tr>
+    <tr>
+        <th align="left">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.FirstName)
+        </td>
+    </tr>
+    <tr>
+        <th align="left">
+            @Html.DisplayNameFor(model => model.SecondName)
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.SecondName)
+        </td>
+    </tr>
+    <tr>
+        <th align="left">
+            @Html.DisplayNameFor(model => model.Patronymic)
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Patronymic)
+        </td>
+    </tr>
+    <tr>
+        <th align="left">
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Age)
+        </td>
+    </tr>
+</table>
+
+<hr />
+
+@Html.ActionLink("Назад к списку сотрудников", "Index", "Employes", null, new { @class = "btn btn-default" })
