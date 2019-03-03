@@ -15,6 +15,8 @@ using WebStore.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using WebStore.DomainEntities.Entities;
 using Microsoft.AspNetCore.Identity;
+using WebStore.Interfaces.Api;
+using WebStore.Clients.Values;
 
 namespace WebStore
 {
@@ -36,6 +38,7 @@ namespace WebStore
                 //options.Filters.Add(typeof(TestResultFilter));
             });
 
+            services.AddTransient<IValueService, ValuesClient>();
             services.AddScoped<IEmployesData, InMemoryEmployesData>();
             //services.AddScoped<IProductData, InMemoryProductData>();
             services.AddScoped<IProductData, SqlProductData>();

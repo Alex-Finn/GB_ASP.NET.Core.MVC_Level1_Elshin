@@ -13,9 +13,11 @@ namespace WebStore.Components
     {
         private readonly IProductData _ProductData;
 
+#pragma warning disable CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
         public BrandsViewComponent(IProductData ProductData) => _ProductData = ProductData;
 
         public async Task<IViewComponentResult> InvokeAsync() => View(GetBrands());
+#pragma warning restore CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
 
         private IEnumerable<BrandViewModel> GetBrands()
         {

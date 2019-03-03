@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.Interfaces.Api;
 using WebStore.Models;
 
 namespace WebStore.Controllers
@@ -22,5 +23,7 @@ namespace WebStore.Controllers
         public IActionResult ErrorPage404() => View();
 
         public IActionResult ContactUs() => View();
+
+        public IActionResult ValuesServicetest([FromServices] IValueService _valueService) => View(_valueService.Get());
     }
 }

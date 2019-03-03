@@ -19,7 +19,9 @@ namespace WebStore.Components
         }
 
 
+#pragma warning disable CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
         public async Task<IViewComponentResult> InvokeAsync()
+#pragma warning restore CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
         {
             var sections = GetSections();
             return View(sections);
