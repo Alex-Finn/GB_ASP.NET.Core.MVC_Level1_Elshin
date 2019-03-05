@@ -11,3 +11,4 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Services\WebStore.ServiceHosting\obj\Debug\netcoreapp2.2\WebStore.ServiceHosting.RazorTargetAssemblyInfo.cache
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Services\WebStore.ServiceHosting\obj\Debug\netcoreapp2.2\WebStore.ServiceHosting.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Services\WebStore.ServiceHosting\obj\Debug\netcoreapp2.2\WebStore.ServiceHosting.pdb
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Services\WebStore.ServiceHosting\obj\Debug\netcoreapp2.2\WebStore.ServiceHosting.csprojAssemblyReference.cache
