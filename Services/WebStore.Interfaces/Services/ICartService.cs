@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebStore.DomainEntities.ViewModels;
 using WebStore.Models;
 
-namespace WebStore.Interfaces
+namespace WebStore.Interfaces.Services
 {
     public interface ICartService
     {

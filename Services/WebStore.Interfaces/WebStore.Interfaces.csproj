@@ -8,8 +8,4 @@
     <ProjectReference Include="..\..\Common\WebStore.DomainEntities\WebStore.DomainEntities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

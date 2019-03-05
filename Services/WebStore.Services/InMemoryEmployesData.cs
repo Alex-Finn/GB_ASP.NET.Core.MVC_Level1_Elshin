@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.DomainEntities.ViewModels;
-using WebStore.Interfaces;
+using WebStore.Interfaces.Services;
 using WebStore.Models;
 
 namespace WebStore.Implementations
@@ -45,11 +45,11 @@ namespace WebStore.Implementations
         /// Метод добавления нового сотрудника
         /// </summary>
         /// <param name="newEmployee">Новый сотрудник для добавления в список</param>
-        public void AddNewEmployee(EmployeeViewModel newEmployee)
+        public void AddNew(EmployeeViewModel newEmployee)
         {
             if (_employees.Contains(newEmployee))
                 return;
-            newEmployee.Id = _employees.Max(e => e.Id) + 1;
+            newEmployee.Id = _employees.Count == 0 ? 1 : _employees.Max(e => e.Id) + 1;
             _employees.Add(newEmployee);
         }
 
@@ -57,7 +57,7 @@ namespace WebStore.Implementations
         /// Метод удаления сотрудника из списка
         /// </summary>
         /// <param name="id">Идентификатор сотрудника</param>
-        public void DeleteEmployee(int id)
+        public void Delete(int id)
         {
             var employee = GetById(id);
             if (employee is null) return;
@@ -68,7 +68,22 @@ namespace WebStore.Implementations
         /// Получение списка сотрудников
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<EmployeeViewModel> Get() => _employees;
+        public IEnumerable<EmployeeViewModel> GetAll() => _employees;
+
+        public EmployeeViewModel UpdateEmployee(int id, EmployeeViewModel employee)
+        {
+            if (employee is null) throw new ArgumentNullException(nameof(employee));
+
+            var exists_employee = GetById(id);
+            if (exists_employee is null) throw new InvalidOperationException($"Сотрудник с id = {id} не найден");
+
+            exists_employee.FirstName = employee.FirstName;
+            exists_employee.SecondName = employee.SecondName;
+            exists_employee.Patronymic = employee.Patronymic;
+            exists_employee.Age = employee.Age;
+
+            return exists_employee;
+        }
 
         /// <summary>
         /// Получение сотрудника по его Id
@@ -77,9 +92,6 @@ namespace WebStore.Implementations
         /// <returns></returns>
         public EmployeeViewModel GetById(int id) => _employees.FirstOrDefault(emp => emp.Id == id);
 
-        public void SaveChanges()
-        {
-            
-        }
+        public void SaveChanges() {}
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
-using WebStore.Interfaces;
+using WebStore.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using WebStore.DomainEntities.ViewModels;
 
@@ -27,7 +27,7 @@ namespace WebStore.Controllers
         //[TestActionFilter]
         public IActionResult Index()
         {
-            return View(_EmployeesData.Get());
+            return View(_EmployeesData.GetAll());
         }
 
         public IActionResult Details(int? id)
@@ -74,7 +74,7 @@ namespace WebStore.Controllers
             }
             if (model.Id == 0)
             {
-                _EmployeesData.AddNewEmployee(model);
+                _EmployeesData.AddNew(model);
             }
             else
             {
@@ -101,7 +101,7 @@ namespace WebStore.Controllers
             if (_EmployeesData.GetById((int)id) is null)
                 return NotFound();
 
-            _EmployeesData.DeleteEmployee((int)id);
+            _EmployeesData.Delete((int)id);
 
             return RedirectToAction("Index");
         }

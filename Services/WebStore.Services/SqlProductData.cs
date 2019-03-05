@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebStore.DAL.Context;
 using WebStore.DomainEntities.Entities;
-using WebStore.Interfaces;
+using WebStore.Interfaces.Services;
 
 namespace WebStore.Implementations
 {
