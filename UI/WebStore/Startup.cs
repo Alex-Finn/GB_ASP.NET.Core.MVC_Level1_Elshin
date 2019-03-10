@@ -12,6 +12,9 @@ using Microsoft.AspNetCore.Identity;
 using WebStore.Interfaces.Api;
 using WebStore.Clients.Values;
 using WebStore.Interfaces.Services;
+using WebStore.Clients.Employees;
+using WebStore.Clients.Products;
+using WebStore.Clients.Orders;
 
 namespace WebStore
 {
@@ -34,11 +37,14 @@ namespace WebStore
             });
 
             services.AddTransient<IValueService, ValuesClient>();
-            services.AddScoped<IEmployesData, InMemoryEmployesData>();
+            services.AddTransient<IEmployesData, EmployeesClient>();
+            //services.AddScoped<IEmployesData, InMemoryEmployesData>();
             //services.AddScoped<IProductData, InMemoryProductData>();
-            services.AddScoped<IProductData, SqlProductData>();
+            services.AddScoped<IProductData, ProductsClient>();
+            //services.AddScoped<IProductData, SqlProductData>();
             services.AddScoped<ICartService, CookieCartService>();
-            services.AddScoped<IOrderService, SqlOrderService>();
+            //services.AddScoped<IOrderService, SqlOrderService>();
+            services.AddScoped<IOrderService, OrdersClient>();
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WebStoreContext>()

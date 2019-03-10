@@ -12,7 +12,7 @@ namespace WebStore.ServiceHosting.Controllers
         public EmployeesController(IEmployesData employesData) => _employesData = employesData;
 
         [HttpPost, ActionName("Post")]
-        public void AddNew(EmployeeViewModel newEmployee)
+        public void AddNew([FromBody] EmployeeViewModel newEmployee)
         {
             _employesData.AddNew(newEmployee);
         }
@@ -42,7 +42,7 @@ namespace WebStore.ServiceHosting.Controllers
         }
 
         [HttpPut("{id}"), ActionName("Put")]
-        public EmployeeViewModel UpdateEmployee(int id, EmployeeViewModel employee)
+        public EmployeeViewModel UpdateEmployee(int id, [FromBody] EmployeeViewModel employee)
         {
             return _employesData.UpdateEmployee(id, employee);
         }

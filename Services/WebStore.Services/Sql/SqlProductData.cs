@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.DAL.Context;
+using WebStore.DomainEntities.DTO.Product;
 using WebStore.DomainEntities.Entities;
 using WebStore.Interfaces.Services;
+using WebStore.Services.Map;
 
 namespace WebStore.Implementations
 {
@@ -28,13 +30,14 @@ namespace WebStore.Implementations
             return _db.Sections.AsEnumerable();
         }
 
-        public IEnumerable<Product> GetProducts(ProductFilter Filter = null)
+        public IEnumerable<ProductDTO> GetProducts(ProductFilter Filter = null)
         {
             if (Filter == null)
                 return _db.Products
                     .Include(p => p.Brand)
                     .Include(p => p.Section)
-                    .AsEnumerable();
+                    .AsEnumerable()
+                    .Select(ProductDTO2Product.Map);
 
             IQueryable<Product> result = _db.Products
                 .Include(p => p.Brand)
@@ -44,15 +47,16 @@ namespace WebStore.Implementations
                 result = result.Where(p => p.BrandId == Filter.BrandId);
             if (Filter.SectionId != null)
                 result = result.Where(p => p.SectionId == Filter.SectionId);
-            return result.AsEnumerable();
+            return result.AsEnumerable().Select(ProductDTO2Product.Map);
         }
 
-        public Product GetProductById(int id)
+        public ProductDTO GetProductById(int id)
         {
             return _db.Products
                 .Include(p => p.Brand)
                 .Include(p => p.Section)
-                .FirstOrDefault(p => p.Id == id);
+                .FirstOrDefault(p => p.Id == id)
+                .Map();
         }
     }
 }

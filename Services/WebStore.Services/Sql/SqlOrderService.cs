@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.DAL.Context;
+using WebStore.DomainEntities.DTO.Order;
 using WebStore.DomainEntities.Entities;
 using WebStore.DomainEntities.ViewModels;
 using WebStore.Interfaces.Services;
 using WebStore.Models;
+using WebStore.Services.Map;
 
 namespace WebStore.Implementations
 {
@@ -23,25 +25,27 @@ namespace WebStore.Implementations
             _UserManager = UserManager;
         }
 
-        public IEnumerable<Order> GetUserOrders(string UserName)
+        public IEnumerable<OrderDTO> GetUserOrders(string UserName)
         {
             return _db.Orders
                 .Include(o => o.User)
                 .Include(o => o.OrderItems)
                 .Where(o => o.User.UserName == UserName)
-                .ToArray();
+                .ToArray()
+                .Select(OrderDTO2Order.Map);
         }
 
-        public Order GetOrderById(int id)
+        public OrderDTO GetOrderById(int id)
         {
-            return _db.Orders.Include(o => o.OrderItems).FirstOrDefault(o => o.Id == id);
+            return _db.Orders.Include(o => o.OrderItems).FirstOrDefault(o => o.Id == id).Map();
         }
 
-        public Order CreateOrder(OrderViewModel OrderModel, CartViewModel CartModel, string UserName)
+        public OrderDTO CreateOrder(CreateOrderModel model, string UserName)
         {
             var user = _UserManager.FindByNameAsync(UserName).Result;
             using (var transaction = _db.Database.BeginTransaction())
             {
+                var OrderModel = model.OrderViewModel;
                 var order = new Order
                 {
                     Address = OrderModel.Address,
@@ -53,19 +57,20 @@ namespace WebStore.Implementations
 
                 _db.Orders.Add(order);
 
-                foreach (var item in CartModel.Items)
+                foreach (var item in model.Items)
                 {
-                    var product_view_model = item.Key;
+                    //var product_view_model = item.Key;
                     //var product = _db.Products.FirstOrDefault(p => p.Id == product_view_model.Id);
-                    var product = _db.Products.Find(product_view_model.Id);
+                    //var product = _db.Products.Find(product_view_model.Id);
+                    var product = _db.Products.FirstOrDefault(p => p.Id == item.Id);
                     if (product is null)
-                        throw new InvalidOperationException($"Товар с id={product_view_model.Id} в базе не неайден");
+                        throw new InvalidOperationException($"Товар с id={item.Id} в базе не неайден");
 
                     var order_item = new OrderItem
                     {
                         Order = order,
                         Price = product.Price,
-                        Count = item.Value,
+                        Count = item.Quantity,
                         Product = product
                     };
 
@@ -76,7 +81,7 @@ namespace WebStore.Implementations
 
                 transaction.Commit();
 
-                return order;
+                return order.Map();
             }
         }
     }

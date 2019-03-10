@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using WebStore.Clients.Base;
@@ -17,22 +18,22 @@ namespace WebStore.Clients.Employees
 
         public void AddNew(EmployeeViewModel newEmployee)
         {
-            throw new NotImplementedException();
+            Post(ServiceAddress, newEmployee);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Delete($"{ServiceAddress}/{id}");
         }
 
         public IEnumerable<EmployeeViewModel> GetAll()
         {
-            throw new NotImplementedException();
+            return Get<List<EmployeeViewModel>>(ServiceAddress);
         }
 
         public EmployeeViewModel GetById(int id)
         {
-            throw new NotImplementedException();
+            return Get<EmployeeViewModel>($"{ServiceAddress}/{id}");
         }
 
         public void SaveChanges()
@@ -42,7 +43,8 @@ namespace WebStore.Clients.Employees
 
         public EmployeeViewModel UpdateEmployee(int id, EmployeeViewModel employee)
         {
-            throw new NotImplementedException();
+            var response = Put($"{ServiceAddress}/{id}", employee);
+            return response.Content.ReadAsAsync<EmployeeViewModel>().Result;
         }
     }
 }
