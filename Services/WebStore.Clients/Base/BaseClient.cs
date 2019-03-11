@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace WebStore.Clients.Base
 {
-    public abstract class BaseClient
+    public abstract class BaseClient : IDisposable
     {
         protected readonly HttpClient _Client;
         protected string ServiceAddress { get; set;}
@@ -24,13 +24,12 @@ namespace WebStore.Clients.Base
             _Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        protected T Get<T>(string url) where T : new()
+        protected T Get<T>(string url) 
         {
             return GetAsync<T>(url).Result;
         }
 
         protected async Task<T> GetAsync<T>(string url, CancellationToken cancel = default(CancellationToken)) 
-            where T : new()
         {
             var response = await _Client.GetAsync(url, cancel);
             if (response.IsSuccessStatusCode)
@@ -39,26 +38,22 @@ namespace WebStore.Clients.Base
         }
 
         protected HttpResponseMessage Post<T>(string url, T value) 
-            where T : new()
         {
             return PostAsync(url, value).Result;
         }
 
-        protected async Task<HttpResponseMessage> PostAsync<T>(string url, T value, CancellationToken cancel = default(CancellationToken))
-           where T : new()
+        protected async Task<HttpResponseMessage> PostAsync<T>(string url, T value, CancellationToken cancel = default(CancellationToken))           
         {
             var response = await _Client.PostAsJsonAsync(url, value, cancel);
             return response.EnsureSuccessStatusCode();
         }
 
         protected HttpResponseMessage Put<T>(string url, T value)
-            where T : new()
         {
             return PutAsync(url, value).Result;
         }
 
         protected async Task<HttpResponseMessage> PutAsync<T>(string url, T value, CancellationToken cancel = default(CancellationToken))
-           where T : new()
         {
             var response = await _Client.PutAsJsonAsync(url, value, cancel);
             return response.EnsureSuccessStatusCode();
@@ -73,6 +68,11 @@ namespace WebStore.Clients.Base
         {
             var response = await _Client.DeleteAsync(url, cancel);
             return response;
+        }
+
+        void IDisposable.Dispose()
+        {
+            _Client.Dispose();
         }
     }
 }

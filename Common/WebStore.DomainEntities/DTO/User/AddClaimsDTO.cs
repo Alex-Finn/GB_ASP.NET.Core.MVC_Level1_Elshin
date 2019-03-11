@@ -9,7 +9,7 @@ namespace WebStore.DomainEntities.DTO.User
 
     public abstract class IdentityModelDTO
     {
-        public Entities.User User { get; }
+        public Entities.User User { get; set; }
     }
 
     public class AddClaimsDTO : IdentityModelDTO

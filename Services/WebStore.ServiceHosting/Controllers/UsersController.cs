@@ -14,10 +14,10 @@ using WebStore.DomainEntities.Entities;
 namespace WebStore.ServiceHosting.Controllers
 {
     [ApiController, Route("api/[controller]"), Produces("application/json")]
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly UserStore<User> _userStore;
-        public UserController(WebStoreContext db)
+        public UsersController(WebStoreContext db)
         {
             _userStore = new UserStore<User>(db)
             {
