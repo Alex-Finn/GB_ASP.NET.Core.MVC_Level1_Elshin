@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using WebStore.DomainEntities.Entities;
 using WebStore.DomainEntities.ViewModels;
 using WebStore.Models;
@@ -15,7 +16,7 @@ namespace WebStore.Controllers
         private readonly UserManager<User> _UserManager;
         private readonly SignInManager<User> _SingInManager;
 
-        public AccountController(UserManager<User> UserManager, SignInManager<User> SingInManager)
+        public AccountController(UserManager<User> UserManager, SignInManager<User> SingInManager, ILogger logger)
         {
             _UserManager = UserManager;
             _SingInManager = SingInManager;
