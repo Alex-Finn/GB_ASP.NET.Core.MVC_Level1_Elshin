@@ -145,3 +145,4 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\WebStore.csproj.CopyComplete
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\WebStore.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\WebStore.pdb
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\bin\Debug\netcoreapp2.2\log4net.config

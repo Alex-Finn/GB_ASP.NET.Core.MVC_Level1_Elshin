@@ -15,11 +15,13 @@ namespace WebStore.Controllers
     {
         private readonly UserManager<User> _UserManager;
         private readonly SignInManager<User> _SingInManager;
+        private readonly ILogger<AccountController> _Logger;
 
-        public AccountController(UserManager<User> UserManager, SignInManager<User> SingInManager, ILogger logger)
+        public AccountController(UserManager<User> UserManager, SignInManager<User> SingInManager, ILogger<AccountController> logger)
         {
             _UserManager = UserManager;
             _SingInManager = SingInManager;
+            _Logger = logger;
         }
 
         [HttpGet]
@@ -30,6 +32,8 @@ namespace WebStore.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
+            _Logger.LogInformation(new EventId(0,"Login"), $"Попытка входа пользователя {model.UserName} в систему");
+
             var login_result = await _SingInManager.PasswordSignInAsync(
                 model.UserName,
                 model.Password,
@@ -38,9 +42,14 @@ namespace WebStore.Controllers
 
             if (login_result.Succeeded)
             {
+                _Logger.LogInformation(new EventId(1, "Login"), $"Пользователь {model.UserName} успешно вошёл в систему");
                 if (Url.IsLocalUrl(model.ReturnUrl))
                     return Redirect(model.ReturnUrl);
                 return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                _Logger.LogWarning(new EventId(1, "Login"), $"попытка входа пользователя {model.UserName} в систему провалена");
             }
 
             ModelState.AddModelError("", "Неверное имя, или пароль пользователя");

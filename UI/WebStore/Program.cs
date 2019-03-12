@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using log4net;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
+using System.Xml;
 using WebStore.DAL.Context;
 using WebStore.Data;
 
@@ -17,32 +20,23 @@ namespace WebStore
     {
         public static void Main(string[] args)
         {
-            //var host = CreateWebHostBuilder(args).Build();
-            var host = BuildWebHost(args);
+            var log4net_config_xml = new XmlDocument();
+            var config_file_name = "log4net.config";
+            log4net_config_xml.Load(config_file_name);
+            var repository = LogManager.CreateRepository(
+                Assembly.GetEntryAssembly(),
+                typeof(log4net.Repository.Hierarchy.Hierarchy));
 
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    var context = services.GetRequiredService<WebStoreContext>();
-                    DbInitializer.Initialize(context);
-                    services.InitializeIdentityAsync().Wait();
-                }
-                catch (Exception e)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(e, "Ошибка инициализации контекста БД");
-                }
-            }
-            host.Run();
+            log4net.Config.XmlConfigurator.Configure(repository, log4net_config_xml["log4net"]);
+
+            log4net.ILog log = log4net.LogManager.GetLogger(typeof(Program));
+            log.Info("Запуск приложения...");
+
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-        //    WebHost.CreateDefaultBuilder(args).UseStartup<Startup>().Build();
-        public static IWebHost BuildWebHost(string[] args) =>
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .UseStartup<Startup>()
-            .Build();
+            .UseStartup<Startup>();
     }
 }
