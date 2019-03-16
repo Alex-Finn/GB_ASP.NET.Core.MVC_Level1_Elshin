@@ -14,6 +14,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.DAL", "Services\WebStore.DAL\WebStore.DAL.csproj", "{8827B29F-123D-4717-B78D-6481003A663D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore", "UI\WebStore\WebStore.csproj", "{A344FC5D-F67A-4CB1-A563-62A09D2E0F82}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B8FD9919-B6AA-4D23-BD1B-734579C2D36B} = {B8FD9919-B6AA-4D23-BD1B-734579C2D36B}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.ServiceHosting", "Services\WebStore.ServiceHosting\WebStore.ServiceHosting.csproj", "{897DF711-6762-4E2E-AB26-142EBE2E20EA}"
 EndProject
@@ -23,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.Services", "Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.Clients", "Services\WebStore.Clients\WebStore.Clients.csproj", "{3169DB1C-9B11-4E59-B020-29C6F1C3A6AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.Logger", "Common\WebStore.Logger\WebStore.Logger.csproj", "{B8FD9919-B6AA-4D23-BD1B-734579C2D36B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.Logger", "Common\WebStore.Logger\WebStore.Logger.csproj", "{B8FD9919-B6AA-4D23-BD1B-734579C2D36B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

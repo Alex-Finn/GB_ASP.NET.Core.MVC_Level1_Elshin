@@ -34,7 +34,7 @@
 
                         <tr>
                             <td class="cart_product">
-                                <a href=""><img src="images/cart/one.png" alt=""></a>
+                                <a href=""><img src="~/images/cart/one.png" alt=""></a>
                             </td>
                             <td class="cart_description">
                                 <h4>
@@ -87,6 +87,6 @@
         <h3>Оформите заказ</h3>
     </div>
     <div class="row login-form">
-        @await Html.PartialAsync("Partal/_OrderPartial", Model.OrderViewModel, new ViewDataDictionary(ViewData) { { "SumCart", SumCart } })
+        @await Html.PartialAsync("Partial/_OrderPartial", Model.OrderViewModel, new ViewDataDictionary(ViewData) { { "SumCart", SumCart } })
     </div>
 </section> <!--/#cart_items-->

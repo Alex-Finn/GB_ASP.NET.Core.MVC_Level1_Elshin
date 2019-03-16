@@ -16,6 +16,8 @@ using WebStore.Clients.Employees;
 using WebStore.Clients.Products;
 using WebStore.Clients.Orders;
 using Microsoft.Extensions.Logging;
+using WebStore.Logger;
+using WebStore.Services.MiddleWare;
 
 namespace WebStore
 {
@@ -82,8 +84,10 @@ namespace WebStore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {   
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory log)
+        {
+            log.AddLog4Net();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -107,6 +111,10 @@ namespace WebStore
             });
 
             app.UseAuthentication();
+
+            app.UseStatusCodePagesWithRedirects("~/home/ErrorStatus/{0}");
+
+            app.UseMiddleware(typeof(ErrorHandlingMiddleWare));
 
             app.UseMvc(route =>
             {

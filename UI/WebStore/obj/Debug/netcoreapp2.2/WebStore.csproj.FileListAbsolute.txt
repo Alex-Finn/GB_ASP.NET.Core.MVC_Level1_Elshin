@@ -105,11 +105,9 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\Default.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\OrderConfirmed.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\Partial\_OrderPartial.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Partial\_Advertisement.g.cshtml.cs
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Partial\_Featuresitems.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\ProductDetails.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Shop.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Shop_backup.g.cshtml.cs
@@ -128,7 +126,6 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\LoginLogout\Default.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Section\Default.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_CategoryTab.g.cshtml.cs
-K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_FeaturedItems.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Footer.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Header.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Leftsidebar.g.cshtml.cs
@@ -146,3 +143,8 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\WebStore.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\WebStore.pdb
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\bin\Debug\netcoreapp2.2\log4net.config
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\bin\Debug\netcoreapp2.2\WebStore.Logger.dll
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\bin\Debug\netcoreapp2.2\WebStore.Logger.pdb
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\Details.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Partial\_FeaturesItems.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_FeaturedItems.g.cshtml.cs

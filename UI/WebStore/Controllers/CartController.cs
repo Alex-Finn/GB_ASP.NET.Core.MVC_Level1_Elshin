@@ -57,7 +57,7 @@ namespace WebStore.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult CheckOut(OrderViewModel model, ILogger<CartController> logger)
+        public IActionResult CheckOut(OrderViewModel model, [FromServices] ILogger<CartController> logger)
         {
             if (!ModelState.IsValid)
                 return View("Details", new DetailsViewModel

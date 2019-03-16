@@ -36,6 +36,7 @@
           "WebStore.DAL": "1.0.0",
           "WebStore.DomainEntities": "1.0.0",
           "WebStore.Interfaces": "1.0.0",
+          "WebStore.Logger": "1.0.0",
           "WebStore.Services": "1.0.0",
           "log4net": "2.0.8"
         },
@@ -1037,11 +1038,24 @@
           "WebStore.Interfaces.dll": {}
         }
       },
+      "WebStore.Logger/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
+          "log4net": "2.0.8"
+        },
+        "runtime": {
+          "WebStore.Logger.dll": {}
+        },
+        "compile": {
+          "WebStore.Logger.dll": {}
+        }
+      },
       "WebStore.Services/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "WebStore.DAL": "1.0.0",
-          "WebStore.Interfaces": "1.0.0"
+          "WebStore.Interfaces": "1.0.0",
+          "log4net": "2.0.8"
         },
         "runtime": {
           "WebStore.Services.dll": {}
@@ -4323,6 +4337,11 @@
       "sha512": ""
     },
     "WebStore.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebStore.Logger/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

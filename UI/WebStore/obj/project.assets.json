@@ -5113,13 +5113,28 @@
           "bin/placeholder/WebStore.Interfaces.dll": {}
         }
       },
+      "WebStore.Logger/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
+          "log4net": "2.0.8"
+        },
+        "compile": {
+          "bin/placeholder/WebStore.Logger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.Logger.dll": {}
+        }
+      },
       "WebStore.Services/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "WebStore.DAL": "1.0.0",
-          "WebStore.Interfaces": "1.0.0"
+          "WebStore.Interfaces": "1.0.0",
+          "log4net": "2.0.8"
         },
         "compile": {
           "bin/placeholder/WebStore.Services.dll": {}
@@ -14017,6 +14032,11 @@
       "path": "../../Services/WebStore.Interfaces/WebStore.Interfaces.csproj",
       "msbuildProject": "../../Services/WebStore.Interfaces/WebStore.Interfaces.csproj"
     },
+    "WebStore.Logger/1.0.0": {
+      "type": "project",
+      "path": "../../Common/WebStore.Logger/WebStore.Logger.csproj",
+      "msbuildProject": "../../Common/WebStore.Logger/WebStore.Logger.csproj"
+    },
     "WebStore.Services/1.0.0": {
       "type": "project",
       "path": "../../Services/WebStore.Services/WebStore.Services.csproj",
@@ -14037,6 +14057,7 @@
       "WebStore.DAL >= 1.0.0",
       "WebStore.DomainEntities >= 1.0.0",
       "WebStore.Interfaces >= 1.0.0",
+      "WebStore.Logger >= 1.0.0",
       "WebStore.Services >= 1.0.0",
       "log4net >= 2.0.8"
     ]
@@ -14072,6 +14093,9 @@
           "projectReferences": {
             "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj": {
               "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.DomainEntities\\WebStore.DomainEntities.csproj"
+            },
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.Logger\\WebStore.Logger.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.Logger\\WebStore.Logger.csproj"
             },
             "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Clients\\WebStore.Clients.csproj": {
               "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Clients\\WebStore.Clients.csproj"
