@@ -18,6 +18,7 @@ using WebStore.Clients.Orders;
 using Microsoft.Extensions.Logging;
 using WebStore.Logger;
 using WebStore.Services.MiddleWare;
+using WebStore.Services;
 
 namespace WebStore
 {
@@ -44,10 +45,11 @@ namespace WebStore
             //services.AddScoped<IEmployesData, InMemoryEmployesData>();
             //services.AddScoped<IProductData, InMemoryProductData>();
             services.AddScoped<IProductData, ProductsClient>();
-            //services.AddScoped<IProductData, SqlProductData>();
-            services.AddScoped<ICartService, CookieCartService>();
-            //services.AddScoped<IOrderService, SqlOrderService>();
-            services.AddScoped<IOrderService, OrdersClient>();
+			//services.AddScoped<IProductData, SqlProductData>();
+			services.AddScoped<ICartStore, CookiesCartStore>();
+			services.AddScoped<ICartService, CartService>();
+			//services.AddScoped<IOrderService, SqlOrderService>();
+			services.AddScoped<IOrderService, OrdersClient>();
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WebStoreContext>()

@@ -10,6 +10,7 @@ using WebStore.DAL.Context;
 using WebStore.Implementations;
 using WebStore.Interfaces.Services;
 using WebStore.Logger;
+using WebStore.Services;
 
 namespace WebStore.ServiceHosting
 {
@@ -31,10 +32,11 @@ namespace WebStore.ServiceHosting
             services.AddSingleton<IEmployesData, InMemoryEmployesData>();
             services.AddScoped<IProductData, SqlProductData>();            
             services.AddScoped<IOrderService, SqlOrderService>();
-            
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<ICartService, CookieCartService>();
-        }
+
+			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+			services.AddScoped<ICartStore, CookiesCartStore>();
+			services.AddScoped<ICartService, CartService>();
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory log)

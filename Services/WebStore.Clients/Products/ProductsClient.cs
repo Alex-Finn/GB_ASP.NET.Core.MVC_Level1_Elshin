@@ -17,25 +17,34 @@ namespace WebStore.Clients.Products
             ServiceAddress = "api/Products";
         }
 
-        public IEnumerable<Brand> GetBrands()
-        {
-            return Get<List<Brand>>($"{ServiceAddress}/brands");
-        }
+		public IEnumerable<Section> GetSections()
+		{
+			return Get<List<Section>>($"{ServiceAddress}/sections");
+		}
 
-        public ProductDTO GetProductById(int id)
-        {
-            return Get<ProductDTO>($"{ServiceAddress}/{id}");
-        }
+		public Section GetSectionById(int id)
+		{
+			return Get<Section>($"{ServiceAddress}/sections/{id}");
+		}
 
-        public IEnumerable<ProductDTO> GetProducts(ProductFilter Filter = null)
-        {
-            var response = Post(ServiceAddress, Filter);
-            return response.Content.ReadAsAsync<IEnumerable<ProductDTO>>().Result;
-        }
+		public IEnumerable<Brand> GetBrands()
+		{
+			return Get<List<Brand>>($"{ServiceAddress}/brands");
+		}
 
-        public IEnumerable<Section> GetSections()
-        {
-            return Get<List<Section>>($"{ServiceAddress}/sections");
-        }
-    }
+		public Brand GetBrandById(int id)
+		{
+			return Get<Brand>($"{ServiceAddress}/brands/{id}");
+		}
+
+		public IEnumerable<ProductDTO> GetProducts(ProductFilter Filter = null)
+		{
+			return Post(ServiceAddress, Filter).Content.ReadAsAsync<IEnumerable<ProductDTO>>().Result;
+		}
+
+		public ProductDTO GetProductById(int id)
+		{
+			return Get<ProductDTO>($"{ServiceAddress}/{id}");
+		}
+	}
 }
