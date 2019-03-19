@@ -148,3 +148,5 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\Details.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Catalog\Partial\_FeaturesItems.g.cshtml.cs
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_FeaturedItems.g.cshtml.cs
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\bin\Debug\netcoreapp2.2\WebStore.TagHelpers.dll
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\UI\WebStore\bin\Debug\netcoreapp2.2\WebStore.TagHelpers.pdb

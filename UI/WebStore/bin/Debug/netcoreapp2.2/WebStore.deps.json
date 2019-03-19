@@ -38,6 +38,7 @@
           "WebStore.Interfaces": "1.0.0",
           "WebStore.Logger": "1.0.0",
           "WebStore.Services": "1.0.0",
+          "WebStore.TagHelpers": "1.0.0",
           "log4net": "2.0.8"
         },
         "runtime": {
@@ -1062,6 +1063,18 @@
         },
         "compile": {
           "WebStore.Services.dll": {}
+        }
+      },
+      "WebStore.TagHelpers/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Microsoft.AspNetCore.Razor": "2.2.0"
+        },
+        "runtime": {
+          "WebStore.TagHelpers.dll": {}
+        },
+        "compile": {
+          "WebStore.TagHelpers.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.2.0": {
@@ -4347,6 +4360,11 @@
       "sha512": ""
     },
     "WebStore.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebStore.TagHelpers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

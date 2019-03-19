@@ -24,7 +24,7 @@ using WebStore.DomainEntities.ViewModels;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fa6ae8a8076424e10d03d05a933f297f810965ed", @"/Views/Employes/index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"792823c94e626c6a9f7c06f77fc0e7296c099b84", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b0da7d44e6fc850ed9be8ca8602fae6055b5539b", @"/Views/_ViewImports.cshtml")]
     public class Views_Employes_index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<WebStore.DomainEntities.ViewModels.EmployeeViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

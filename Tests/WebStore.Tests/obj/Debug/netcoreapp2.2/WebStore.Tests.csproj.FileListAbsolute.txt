@@ -30,3 +30,5 @@ K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 ку
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Tests\WebStore.Tests\bin\Debug\netcoreapp2.2\WebStore.Tests.pdb
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Tests\WebStore.Tests\obj\Debug\netcoreapp2.2\WebStore.Tests.dll
 K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Tests\WebStore.Tests\obj\Debug\netcoreapp2.2\WebStore.Tests.pdb
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Tests\WebStore.Tests\bin\Debug\netcoreapp2.2\WebStore.TagHelpers.dll
+K:\DATA\Мои документы\Учёба\МИП\C#\GeekBrains\ASP.NET 1 курс\WebStore\Tests\WebStore.Tests\bin\Debug\netcoreapp2.2\WebStore.TagHelpers.pdb

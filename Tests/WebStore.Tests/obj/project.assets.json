@@ -469,6 +469,18 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Razor/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Html.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Razor.Language/2.2.0": {
         "type": "package",
         "compile": {
@@ -3915,6 +3927,7 @@
           "WebStore.Interfaces": "1.0.0",
           "WebStore.Logger": "1.0.0",
           "WebStore.Services": "1.0.0",
+          "WebStore.TagHelpers": "1.0.0",
           "log4net": "2.0.8"
         },
         "compile": {
@@ -4013,6 +4026,20 @@
         },
         "runtime": {
           "bin/placeholder/WebStore.Services.dll": {}
+        }
+      },
+      "WebStore.TagHelpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Microsoft.AspNetCore.Razor": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/WebStore.TagHelpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.TagHelpers.dll": {}
         }
       }
     }
@@ -4498,6 +4525,19 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.xml",
         "microsoft.aspnetcore.mvc.viewfeatures.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.mvc.viewfeatures.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Razor/2.2.0": {
+      "sha512": "CI0mRNA/v41q/18qXzUaM850jwdts3i4+EZXxVTZUSTTVxzODqkGIsBv4tWHfJPucM5G9V+9XnNd1itN3Fh1sA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.razor/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.xml",
+        "microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.razor.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor.Language/2.2.0": {
@@ -12127,6 +12167,11 @@
       "type": "project",
       "path": "../../Services/WebStore.Services/WebStore.Services.csproj",
       "msbuildProject": "../../Services/WebStore.Services/WebStore.Services.csproj"
+    },
+    "WebStore.TagHelpers/1.0.0": {
+      "type": "project",
+      "path": "../../Common/WebStore.TagHelpers/WebStore.TagHelpers.csproj",
+      "msbuildProject": "../../Common/WebStore.TagHelpers/WebStore.TagHelpers.csproj"
     }
   },
   "projectFileDependencyGroups": {

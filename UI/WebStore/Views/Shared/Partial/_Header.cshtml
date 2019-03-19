@@ -94,24 +94,24 @@
                             <li class="dropdown">
                                 <a href="#">Продукты<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a asp-controller="Catalog" asp-action="Shop">Продукты</a></li>
-                                    <li><a asp-controller="Catalog" asp-action="ProductDetails">Информация о товаре</a></li>
-                                    <li><a asp-controller="Home" asp-action="CheckOut">Оформление заказа</a></li>
-                                    <li><a asp-controller="Home" asp-action="Cart">Корзина</a></li>
-                                    <li><a asp-controller="Account" asp-action="Login">Логин</a></li>
+                                    <li><a is-active-route asp-controller="Catalog" asp-action="Shop">Продукты</a></li>
+                                    <li><a is-active-route asp-controller="Catalog" asp-action="ProductDetails">Информация о товаре</a></li>
+                                    <li><a is-active-route asp-controller="Home" asp-action="CheckOut">Оформление заказа</a></li>
+                                    <li><a is-active-route asp-controller="Home" asp-action="Cart">Корзина</a></li>
+                                    <li><a is-active-route asp-controller="Account" asp-action="Login">Логин</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#">Блоги<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a asp-controller="Home" asp-action="Blog">Блог</a></li>
-                                    <li><a asp-controller="Home" asp-action="BlogSingle">Блог сингл</a></li>
+                                    <li><a is-active-route asp-controller="Home" asp-action="Blog">Блог</a></li>
+                                    <li><a is-active-route asp-controller="Home" asp-action="BlogSingle">Блог сингл</a></li>
                                 </ul>
                             </li>
-                            <li><a asp-controller="Home" asp-action="ErrorPage404">Ошибка 404</a></li>
-                            <li><a asp-controller="Home" asp-action="ContactUs">Связаться с нами</a></li>
-                            <li><a asp-controller="Employes" asp-action="Index">Список сотрудников</a></li>
-                            <li><a asp-controller="Home" asp-action="ValuesServiceTest">Тест веб-сервиса</a></li>
+                            <li><a is-active-route asp-controller="Home" asp-action="ErrorPage404">Ошибка 404</a></li>
+                            <li><a is-active-route asp-controller="Home" asp-action="ContactUs">Связаться с нами</a></li>
+                            <li><a is-active-route asp-controller="Employes" asp-action="Index">Список сотрудников</a></li>
+                            <li><a is-active-route asp-controller="Home" asp-action="ValuesServiceTest">Тест веб-сервиса</a></li>
                         </ul>
                     </div>
                 </div>

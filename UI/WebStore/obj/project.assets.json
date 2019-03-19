@@ -5142,6 +5142,20 @@
         "runtime": {
           "bin/placeholder/WebStore.Services.dll": {}
         }
+      },
+      "WebStore.TagHelpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Microsoft.AspNetCore.Razor": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/WebStore.TagHelpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.TagHelpers.dll": {}
+        }
       }
     }
   },
@@ -14041,6 +14055,11 @@
       "type": "project",
       "path": "../../Services/WebStore.Services/WebStore.Services.csproj",
       "msbuildProject": "../../Services/WebStore.Services/WebStore.Services.csproj"
+    },
+    "WebStore.TagHelpers/1.0.0": {
+      "type": "project",
+      "path": "../../Common/WebStore.TagHelpers/WebStore.TagHelpers.csproj",
+      "msbuildProject": "../../Common/WebStore.TagHelpers/WebStore.TagHelpers.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -14059,6 +14078,7 @@
       "WebStore.Interfaces >= 1.0.0",
       "WebStore.Logger >= 1.0.0",
       "WebStore.Services >= 1.0.0",
+      "WebStore.TagHelpers >= 1.0.0",
       "log4net >= 2.0.8"
     ]
   },
@@ -14096,6 +14116,9 @@
             },
             "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.Logger\\WebStore.Logger.csproj": {
               "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.Logger\\WebStore.Logger.csproj"
+            },
+            "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.TagHelpers\\WebStore.TagHelpers.csproj": {
+              "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Common\\WebStore.TagHelpers\\WebStore.TagHelpers.csproj"
             },
             "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Clients\\WebStore.Clients.csproj": {
               "projectPath": "K:\\DATA\\Мои документы\\Учёба\\МИП\\C#\\GeekBrains\\ASP.NET 1 курс\\WebStore\\Services\\WebStore.Clients\\WebStore.Clients.csproj"
